@@ -18,9 +18,9 @@ A simple trivia game bot built using Python and the python-telegram-bot library.
 ## Set up your bot token in a .env file:
 BOT_TOKEN=your_token_here
 
-Usage
-1. Run the bot script:
-   python TriviagameBot.py
+   ## Usage
+   1. Run the bot script:
+python TriviagameBot.py
 
    ## License
 This project is licensed under the MIT License.
