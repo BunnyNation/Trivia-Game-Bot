@@ -20,7 +20,8 @@ BOT_TOKEN=your_token_here
 
    ## Usage
    1. Run the bot script:
-python TriviagameBot.py
+      ```bash
+      python TriviagameBot.py
 
    ## License
 This project is licensed under the MIT License.
