@@ -4,6 +4,10 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Cont
 import os
 from dotenv import load_dotenv
 
+# Set the port to an environment variable or default to 8080
+port = os.getenv("PORT", "8080")
+print(f"Listening on port {port}...")
+
 load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
