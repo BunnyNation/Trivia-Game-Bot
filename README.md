@@ -13,7 +13,9 @@ A simple trivia game bot built using Python and the python-telegram-bot library.
    git clone https://github.com/BunnyNation/Trivia-Game-Bot.git
 
 ## Install dependencies:
-- pip install -r requirements.txt
+1. Which is:
+   ```bash
+   pip install -r requirements.txt
 
 ## Set up your bot token in a .env file:
 BOT_TOKEN=your_token_here
