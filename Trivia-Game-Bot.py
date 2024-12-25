@@ -148,8 +148,6 @@ QUESTIONS = [
     ("What is the highest-grossing film of all time?", ["Avatar", "Titanic", "Avengers: Endgame", "Jurassic Park"], "Avatar"),
     ("Who is known as the 'Father of Computers'?", ["Charles Babbage", "Alan Turing", "John von Neumann", "George Boole"], "Charles Babbage"),
     ("What is the currency of Japan?", ["Yen", "Won", "Dollar", "Peso"], "Yen"),
-    ("Which animal is the fastest on land?", ["Cheetah", "Lion", "Horse", "Ostrich"], "Cheetah"),
-    ("Which country is known as the 'Land of the Rising Sun'?", ["Japan", "China", "South Korea", "India"], "Japan"),
     ("Which Manchester United Player has the best bicycle kick in the Red Devils History?", ["Wayne Rooney", "Nani", "Alejandro Garnacho", "Marcus Rashford"], "Alejandro Garnacho"),
 ]
 
