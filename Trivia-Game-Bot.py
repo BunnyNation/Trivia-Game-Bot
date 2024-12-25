@@ -3,9 +3,17 @@ from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 import os
 from dotenv import load_dotenv
+from flask import Flask
+
+# Create a Flask server
+server = Flask(__name__)
+
+@server.route("/")
+def hello():
+    return "Dummy server is running for Render's port requirement."
 
 # Set the port to an environment variable or default to 8080
-port = os.getenv("PORT", "8080")
+port = os.getenv("PORT", "4000")
 print(f"Listening on port {port}...")
 
 load_dotenv()
@@ -206,3 +214,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    port = int(os.environ.get("PORT", 4000))
+    server.run(host="0.0.0.0", port=port)
