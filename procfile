@@ -1,1 +1,3 @@
-worker: python TriviagameBot.py
+worker: python Trivia-Game-Bot.py
+
+
