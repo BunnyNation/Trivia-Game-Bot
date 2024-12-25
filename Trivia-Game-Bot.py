@@ -5,6 +5,16 @@ import os
 from dotenv import load_dotenv
 from flask import Flask
 
+app = Flask(__name__)  # This is your Flask app instance
+
+@app.route("/")
+def home():
+    return "Bot is running!"
+
+# Bind to Render's dynamically assigned port
+PORT = int(os.getenv("PORT", 4000))
+app.run(host="0.0.0.0", port=PORT)
+
 # Create a Flask server
 server = Flask(__name__)
 
