@@ -3,24 +3,6 @@ from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 import os
 from dotenv import load_dotenv
-from flask import Flask
-
-app = Flask(__name__)  # This is your Flask app instance
-
-@app.route("/")
-def home():
-    return "Bot is running!"
-
-# Bind to Render's dynamically assigned port
-PORT = int(os.getenv("PORT", 4000))
-app.run(host="0.0.0.0", port=PORT)
-
-# Create a Flask server
-server = Flask(__name__)
-
-@server.route("/")
-def hello():
-    return "Dummy server is running for Render's port requirement."
 
 # Set the port to an environment variable or default to 8080
 port = os.getenv("PORT", "4000")
@@ -198,9 +180,9 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if user_answer == correct_answer:
         user_scores[username] = user_scores.get(username, 0) + 1
-        response = f"🎉👏Correct! ✅ Your score is now {user_scores[username]}."
+        response = f"🎉👏Correct! ✅ Your score is now     {user_scores[username]}."
     else:
-        response = f"😢Incorrect ❌. The correct✔️ answer was: {correct_answer}."
+        response = f"😢Incorrect ❌. The correct✔️ answer is:    {correct_answer}."
 
     await query.edit_message_text(response)
     await ask_question(query, context)
@@ -223,4 +205,3 @@ def main():
 if __name__ == "__main__":
     main()
     port = int(os.environ.get("PORT", 4000))
-    server.run(host="0.0.0.0", port=port)
